@@ -95,7 +95,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'fa-ir'
 
-TIME_ZONE = 'Asia/Tehran'
+TIME_ZONE = 'Utc'
 
 USE_I18N = True
 

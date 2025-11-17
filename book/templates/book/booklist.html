@@ -14,5 +14,14 @@
 </head>
 <body>
     <h1>This is a test Template </Template></h1>
+    <ul>
+        {%  for i in har  %}
+        
+        <li><a href="{% url 's' x=i.id%}">{{i}}</a></li>
+
+
+
+        {%  endfor  %}
+    </ul>
 </body>
 </html>
