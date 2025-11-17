@@ -4,7 +4,12 @@ from django.db import models
 class Author(models.Model):
     name = models.CharField(max_length=50)
     birthdate = models.DateField()
-    biografi = models.TextField()
+    biografi = models.TextField(blank=True)
+    def __str__(self):
+        return f'{self.name}'
+    class Meta:
+        verbose_name = "نویسنده"
+        verbose_name_plural = 'نویسنده'
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
