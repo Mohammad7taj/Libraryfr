@@ -1,8 +1,12 @@
 from django.urls import path
-from book.views import home
+from book.views import home, index
+
 
 urlpatterns = [
-    path('books/', home),
+    path('lil/', home),
+    path("", index)
+
 ]
+
 
 
