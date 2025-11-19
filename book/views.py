@@ -16,3 +16,4 @@ def book_detale(request, x):
     context = {'book':book}
     return render(request, 'book/bookdetale.html', context)
 
+
