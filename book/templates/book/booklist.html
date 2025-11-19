@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        h1 {
-            color: red;
-            text-align: center;
+{% extends 'book/base.html' %}
+{% block title %} listbooks  {% endblock %}
 
-        }
-    </style>
-</head>
-<body>
-    <h1>This is a test Template </Template></h1>
-    <ul>
+{% block main %}          
+
+ 
+    <ul class="list-group">
         {%  for i in har  %}
         
-        <li><a href="{% url 's' x=i.id%}">{{i}}</a></li>
+        <li  class="list-group-item"><a class="text-group-item" href="{% url 's' x=i.id%}">{{i}}</a> {{  i.author  }}</li>
 
 
 
         {%  endfor  %}
     </ul>
-</body>
-</html>
 
+
+
+ {% endblock %}

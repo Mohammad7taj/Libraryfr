@@ -1,0 +1,16 @@
+body{
+    direction: rtl;
+    height: calc(100% - 200px);
+}
+h1{
+    color: red;;
+}
+h2{
+    color: pink;
+}
+#fim {
+    height: 200px;
+    width: 100%;
+    position: fixed;
+    top: calc(100% - 200px);
+}

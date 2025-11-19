@@ -8,7 +8,6 @@ class Author(models.Model):
     def __str__(self):
         return f'{self.name}'
 
-
 class Category(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
@@ -20,10 +19,12 @@ class Book(models.Model):
     title = models.CharField(max_length=50)
     author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey('Category', on_delete=models.PROTECT)
+    kholase = models.TextField(default='kh')
+    cover = models.ImageField(upload_to='ket', default='default.jpg')
     pages = models.PositiveSmallIntegerField(default=0)
     creat_at = models.DateTimeField(auto_now_add=True)
     ubdate = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f'{self.title}'
-
+    
