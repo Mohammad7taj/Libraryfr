@@ -5,9 +5,9 @@
 
  
     <ul class="list-group">
-        {%  for i in har  %}
+        {%  for book in books  %}
         
-        <li  class="list-group-item"><a class="text-group-item" href="{% url 's' x=i.id%}">{{i}}</a> {{  i.author  }}</li>
+        <li  class="list-group-item"><a class="text-group-item" href="{% url 'book' id=book.id%}">{{book}}</a></li>
 
 
 

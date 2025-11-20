@@ -1,0 +1,22 @@
+{% extends 'book/base.html' %}
+{% block title %} کتاب جدید  {% endblock %}
+
+{% block main %}          
+
+    <div class="row">
+        <div class="col-sm-6">
+                <form action="{% url 'creat' %}" method="post">
+                {% csrf_token %}
+                    <div class="form-grop">
+                        <label class="form-lable" for="title">عنوان</label>
+                        <input class="form-control" type="text" id="title" name="title" placeholder="نویسنده">
+                        <input class="form-control" type="text" name="author" placeholder="ژانر">
+                        <input class="form-control" type="text" name="category">
+                        <input class="btn btn-success mt-2" type="submit" value="ایجاد">
+                    </div>
+                </form>
+        </div>
+    </div>
+
+
+ {% endblock %}
