@@ -7,7 +7,7 @@ class Author(models.Model):
     birthdate = models.DateField()
     biografi = models.TextField(blank=True)
     def __str__(self):
-        return f"{self.first_name, self.last_name}"
+        return f"{self.first_name}, {self.last_name}"
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
@@ -19,7 +19,9 @@ class Category(models.Model):
 class Book(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=50)
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
+    author = models.ForeignKey(
+        'Author', on_delete=models.SET_NULL, null=True
+    )
     category = models.ForeignKey('Category', on_delete=models.PROTECT)
     kholase = models.TextField(default='kh')
     cover = models.ImageField(upload_to='ket', default='default.jpg')

@@ -1,0 +1,19 @@
+{% extends 'book/base.html' %}
+{% block title %} دسته بندی جدید {% endblock %}
+
+{% block main %}          
+
+    <div class="row">
+        <div class="col-sm-6">
+                <form action="{% url 'new_category' %}" method="post">
+                {% csrf_token %}
+                {{ cat_form }}
+
+
+                        <input class="btn btn-success mt-2" type="submit" value="ایجاد">
+                </form>
+        </div>
+    </div>
+
+
+ {% endblock %}
